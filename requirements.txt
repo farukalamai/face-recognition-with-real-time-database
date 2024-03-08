@@ -3,3 +3,4 @@ dlib
 face-recognition
 cvzone
 opencv-python
+firebase-admin

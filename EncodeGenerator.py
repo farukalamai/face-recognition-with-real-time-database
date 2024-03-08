@@ -2,6 +2,16 @@ import cv2
 import face_recognition
 import pickle
 import os
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from firebase_admin import storage
+
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': "https://faceattendence-1ced0-default-rtdb.firebaseio.com/",
+    'storageBucket': "faceattendence-1ced0.appspot.com"
+})
 
 # importing student images
 folder = "Images"
@@ -14,6 +24,10 @@ for path in path_list:
     sid = path.split(".")[0]
     # print(sid)
     student_ids.append(sid)
+    filename = os.path.join(folder, path)
+    bucket = storage.bucket()
+    blob = bucket.blob(filename)
+    blob.upload_from_filename(filename)
 
 
 
