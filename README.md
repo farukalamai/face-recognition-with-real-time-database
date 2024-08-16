@@ -1,11 +1,7 @@
 # face-recognition-with-real-time-database
+https://github.com/user-attachments/assets/56815413-6fc6-4cbd-91de-b4a44abc5999
 
-1. Starting with Webcam
-2. Working with Graphics
-3. Encoding Generator
-4. Face Recognition
-5. Database setup
-6. Add data to database
-7. Add images to database
-8. Real-time database update
-9. Limit the attendence per day
+## Video Link
+Original video on [YouTube](https://www.youtube.com/watch?v=BRPNy2upQzA)
+
+
